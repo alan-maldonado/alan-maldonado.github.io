@@ -5,7 +5,7 @@
 # Site
 title: Alan Maldonado
 subtitle:
-description:
+description: Software Developer
 author: Alan Maldonado
 language:
 timezone:
@@ -17,11 +17,70 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
+#Custom Setting Start
+
+# Site settings
+SEOTitle: Dev | Alan Maldonado
+header-img: img/home-bg.jpg
+email: alan.maldonado@gmail.com
+keyword: ""
+
+
+# SNS settings
+# RSS: true
+# weibo_username:
+# zhihu_username:
+github_username:    alan-maldonado
+twitter_username:   alan_maldonado
+facebook_username:  alan.maldonado
+linkedin_username:  alanmaldonado
+
+# Build settings
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+# Disqus settings
+# disqus_username: hexo-theme-huxblog
+
+# Duoshuo settings
+# duoshuo_username: kaijun
+# Share component is depend on Comment so we can NOT use share only.
+duoshuo_share: false                     # set to false if you want to use Comment without Sharing
+
+
+# Analytics settings
+# Baidu Analytics
+# ba_track_id:
+# Google Analytics
+# ga_track_id: 'UA-xxxxxxxx-1'            # Format: UA-xxxxxx-xx
+# ga_domain: alanmaldonado.pro
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "Dev. Alan Maldonado"
+sidebar-avatar: img/am-bw.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+# Friends
+# friends: [
+#    {
+#        title: "",
+#        href: ""
+#    }
+#]
+#Custom Setting End
+
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
-archive_dir: archives
+archive_dir: i_dont_wanna_use_default_archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
@@ -40,7 +99,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
@@ -63,11 +122,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: huxblog
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:alan-maldonado/alan-maldonado.github.io.git
-  branch: gh-pages
+  branch: master

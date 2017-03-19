@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Alan Maldonado
-subtitle:
+title: alan maldonado
+subtitle: dotNet, nodeJs, react, python developer
 description: Software Developer
-author: Alan Maldonado
+author: alan
 language:
 timezone:
 
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.alanmaldonado.pro/
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:title/
 permalink_defaults:
 
 #Custom Setting Start

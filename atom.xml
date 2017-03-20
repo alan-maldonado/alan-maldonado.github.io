@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.alanmaldonado.pro/"/>
-  <updated>2017-03-20T05:53:50.000Z</updated>
+  <updated>2017-03-20T06:44:46.000Z</updated>
   <id>http://www.alanmaldonado.pro/</id>
   
   <author>
@@ -19,14 +19,14 @@
     <title>Backbone</title>
     <link href="http://www.alanmaldonado.pro/2017/03/backbone/"/>
     <id>http://www.alanmaldonado.pro/2017/03/backbone/</id>
-    <published>2017-03-20T00:42:26.000Z</published>
-    <updated>2017-03-20T05:53:50.000Z</updated>
+    <published>2017-03-20T00:42:00.000Z</published>
+    <updated>2017-03-20T06:44:46.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>“Backbone JS”</p>
 </blockquote>
 <p>Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.</p>
-<h1 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h1><p><img src="backbone.png" alt="Image of Backbone"></p>
+<h1 id="Backbone"><a href="#Backbone" class="headerlink" title="Backbone"></a>Backbone</h1><p><img src="/img/pasted-backbone.png" alt="Image of Backbone"></p>
 <h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h3 id="Creating-Models"><a href="#Creating-Models" class="headerlink" title="Creating Models"></a>Creating Models</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Song = Backbone.Model.extend(&#123;</div><div class="line">  <span class="attr">idAttribute</span>: <span class="string">'songId'</span>,</div><div class="line">  <span class="attr">urlRoot</span>: <span class="string">'/api/songs'</span>,</div><div class="line">  <span class="attr">defaults</span>: &#123;</div><div class="line">    <span class="attr">downloads</span>: <span class="number">0</span></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  <span class="attr">validate</span>: <span class="function"><span class="keyword">function</span>(<span class="params">attrs</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span> (!attrs.title)</div><div class="line">      <span class="keyword">return</span> <span class="string">'Title is required.'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> song = <span class="keyword">new</span> Song(&#123; <span class="attr">songId</span>: <span class="number">1</span>, <span class="attr">title</span>: <span class="string">'Blue in Green'</span> &#125;);</div></pre></td></tr></table></figure>
 <h3 id="Working-with-Attributes"><a href="#Working-with-Attributes" class="headerlink" title="Working with Attributes"></a>Working with Attributes</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">song.set(<span class="string">'genre'</span>, <span class="string">'Jazz'</span>);</div><div class="line"><span class="keyword">var</span> genre = song.get(<span class="string">'genre'</span>);</div><div class="line">song.unset(<span class="string">'genre'</span>);</div><div class="line"><span class="keyword">var</span> hasGenre = song.has(<span class="string">'genre'</span>);</div><div class="line">song.clear();</div></pre></td></tr></table></figure>
 <h3 id="Validation"><a href="#Validation" class="headerlink" title="Validation"></a>Validation</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> isValid = song.isValid();</div><div class="line"><span class="keyword">var</span> lastError = song.validationError;</div></pre></td></tr></table></figure>
@@ -45,8 +45,7 @@
 <h3 id="Route-Patterns"><a href="#Route-Patterns" class="headerlink" title="Route Patterns"></a>Route Patterns</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Normal route</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// albums</span></div><div class="line"><span class="keyword">var</span> AppRouter = Backbone.Router.extend(&#123;</div><div class="line">  <span class="attr">routes</span>: &#123;</div><div class="line">    <span class="string">'albums'</span>: <span class="string">'showAlbum'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">showAlbum</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Route with parameters</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// albums/1/songs/2</span></div><div class="line"><span class="keyword">var</span> AppRouter = Backbone.Router.extend(&#123;</div><div class="line">  <span class="attr">routes</span>: &#123;</div><div class="line">    <span class="string">'albums/:albumId/songs/:songId'</span>: <span class="string">'showSong'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">showSong</span>: <span class="function"><span class="keyword">function</span>(<span class="params">albumId, songId</span>)</span>&#123;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Route with a splat</span></div><div class="line"><span class="comment">//</span></div><div class="line"><span class="comment">// download/folderA/folderB/fileC</span></div><div class="line"><span class="keyword">var</span> AppRouter = Backbone.Router.extend(&#123;</div><div class="line">  <span class="attr">routes</span>: &#123;</div><div class="line">    <span class="string">'download/*url'</span>: <span class="string">'download'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="attr">download</span>: <span class="function"><span class="keyword">function</span>(<span class="params">url</span>)</span>&#123;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router.navigate(url, &#123; <span class="attr">trigger</span>: <span class="literal">true</span> &#125;);</div></pre></td></tr></table></figure>
-]]></content>
+<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">router.navigate(url, &#123; <span class="attr">trigger</span>: <span class="literal">true</span> &#125;);</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
@@ -57,8 +56,12 @@
     
     </summary>
     
+      <category term="javascript" scheme="http://www.alanmaldonado.pro/categories/javascript/"/>
+    
     
       <category term="javascript" scheme="http://www.alanmaldonado.pro/tags/javascript/"/>
+    
+      <category term="backbone" scheme="http://www.alanmaldonado.pro/tags/backbone/"/>
     
   </entry>
   

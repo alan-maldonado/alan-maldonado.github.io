@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: alan maldonado
+title: Alan Maldonado
 subtitle: dotNet, nodeJs, react, python developer
 description: Software Developer
 author: alan
@@ -21,7 +21,7 @@ permalink_defaults:
 
 # Site settings
 SEOTitle: Dev | Alan Maldonado
-header-img: img/home-bg.jpg
+header-img: img/programmer-life.jpg
 email: alan.maldonado@gmail.com
 keyword: ""
 

@@ -124,6 +124,12 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: huxblog
 
+# hexo-admin authentification
+admin:
+  username: alan
+  password_hash: $2a$10$9v7drTJpqU9wZ1ujb6hhveMSADqV22pfYGbElGBqmjMQ8VFzlkGZe
+  secret: this is an amazing secret
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

@@ -1,16 +1,19 @@
----
 title: Backbone
-date: 2017-03-19 18:42:26
-tags: javascript
-header-img: "/img/javascript-bg.jpg"
+tags:
+  - javascript
+  - backbone
+header-img: /img/javascript-bg.jpg
+categories:
+  - javascript
+author: ''
+date: 2017-03-19 18:42:00
 ---
-
 > "Backbone JS"
 
 Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
 
 # Backbone
-![Image of Backbone](backbone.png)
+![Image of Backbone](/img/pasted-backbone.png)
 
 ## Models
 

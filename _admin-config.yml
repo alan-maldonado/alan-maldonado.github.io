@@ -1,0 +1,3 @@
+options:
+  imagePath: /img
+  askImageFilename: false
